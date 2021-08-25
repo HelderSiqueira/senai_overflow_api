@@ -2,7 +2,7 @@ const {Model, DataTypes} = require("sequelize");
 
 class Post extends Model{
 
-    static init(sequelize){
+    static init(connection){
         super.init(
             {
                 title: DataTypes.STRING,
@@ -11,13 +11,13 @@ class Post extends Model{
                 gist: DataTypes.STRING,
             },
             {
-                connection
+                sequelize: connection,
             }
-        )
+        );
     }
 
     static associate(models){
-        
+        this.belongsTo(models.User);
     }
 }
 
