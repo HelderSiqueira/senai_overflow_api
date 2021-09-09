@@ -1,44 +1,32 @@
 module.exports = {
-    index(req, res) {
-        const posts = [{
+  index(req, res) {
+    const posts = [
+      {
+        author: {
+          name: "fulano",
+        },
+        created_at: "10/10/2021",
+        title: "este um post sobre js",
+        description: "js é uma linguagem legal",
+        image:
+          "https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png",
+        gist: "https://github.com/settings/profile",
+        categories: ["js", "backend", "front", "html", "css"],
+        coments: [
+          {
             author: {
-                name: "Fulano",
+              name: "fulano",
             },
-            created_at: "23/08/2021",
-            title: "Este é um post sobre JS",
-            description: "JS é uma linguagem de programação muito top",
-            image: "https://img.elo7.com.br/product/original/21F8224/paisagem-pintura-em-tela-pantanal-pintura-paisagem-oleo-sobre-tela.jpg",
-            gist: "https://github.com.br/",
-            categories: [
-                "JS", "Back-end", "Express"
-            ],
-            comments: [
-                {
-                    author: {
-                        name: "Ciclano",
-                    },
-                    created_at: "23/08/2021",
-                    description: "Realmente JS é muito top"
-                }
-            ]
-        }];
-
-        res.send(posts);
-    },
-
-    find(req, res) {
-
-    },
-
-    store(req, res) {
-
-    },
-
-    update(req, res) {
-
-    },
-
-    delete(req, res) {
-
-    }
-}
+            created_at: "10/01/2020",
+            description: "js é legal",
+          },
+        ],
+      },
+    ];
+    res.send(posts);
+  },
+  find(req, res) {},
+  store(req, res) {},
+  update(req, res) {},
+  delete(req, res) {},
+};

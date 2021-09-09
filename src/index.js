@@ -1,5 +1,6 @@
-const app = require("./app");
+const app = require("./app")
 
-app.listen(3333, () => {
-    console.log("Servidor rodando na porta 3333");
+app.listen(3333, ()=>{
+  console.log(`servidor rodando na porta ${3333}`)
+
 })
